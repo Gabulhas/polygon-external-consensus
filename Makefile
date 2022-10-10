@@ -57,3 +57,12 @@ run-local:
 stop-local:
 	docker-compose -f ./docker/local/docker-compose.yml stop
 
+
+inittestnetwork:
+	$(MAKE) build
+	./polygon-edge secrets init --data-dir ./temp-stuff/test-chain-1
+	./polygon-edge secrets init --data-dir ./temp-stuff/test-chain-2
+	./polygon-edge secrets init --data-dir ./temp-stuff/test-chain-3
+	./polygon-edge secrets init --data-dir ./temp-stuff/test-chain-4
+
+

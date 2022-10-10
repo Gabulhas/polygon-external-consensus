@@ -4,6 +4,7 @@ import (
 	"github.com/0xPolygon/polygon-edge/consensus"
 	consensusDev "github.com/0xPolygon/polygon-edge/consensus/dev"
 	consensusDummy "github.com/0xPolygon/polygon-edge/consensus/dummy"
+	consensusExternal "github.com/0xPolygon/polygon-edge/consensus/external"
 	consensusIBFT "github.com/0xPolygon/polygon-edge/consensus/ibft"
 	"github.com/0xPolygon/polygon-edge/secrets"
 	"github.com/0xPolygon/polygon-edge/secrets/awsssm"
@@ -15,15 +16,17 @@ import (
 type ConsensusType string
 
 const (
-	DevConsensus   ConsensusType = "dev"
-	IBFTConsensus  ConsensusType = "ibft"
-	DummyConsensus ConsensusType = "dummy"
+	DevConsensus      ConsensusType = "dev"
+	IBFTConsensus     ConsensusType = "ibft"
+	DummyConsensus    ConsensusType = "dummy"
+	ExternalConsensus ConsensusType = "external"
 )
 
 var consensusBackends = map[ConsensusType]consensus.Factory{
-	DevConsensus:   consensusDev.Factory,
-	IBFTConsensus:  consensusIBFT.Factory,
-	DummyConsensus: consensusDummy.Factory,
+	DevConsensus:      consensusDev.Factory,
+	IBFTConsensus:     consensusIBFT.Factory,
+	DummyConsensus:    consensusDummy.Factory,
+	ExternalConsensus: consensusExternal.Factory,
 }
 
 // secretsManagerBackends defines the SecretManager factories for different
