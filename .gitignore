@@ -26,3 +26,7 @@ artifacts
 *.log
 
 vendor/
+
+polygon-edge
+
+temp-stuff/
