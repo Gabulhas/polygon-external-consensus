@@ -1,7 +1,6 @@
 package external
 
 import (
-	"fmt"
 	"time"
 
 	"github.com/0xPolygon/polygon-edge/blockchain"
@@ -27,16 +26,16 @@ type External struct {
 	notifyCh chan struct{}
 	closeCh  chan struct{}
 
-	interval uint64
-
 	Grpc           *grpc.Server
 	blockchain     *blockchain.Blockchain
-	executor       *state.Executor
+	config         *consensus.Config
+	executor       *state.Executor // Executes the newer state (from a transaction) in the current state
 	metrics        *consensus.Metrics
 	network        *network.Server
 	secretsManager secrets.SecretsManager
 	syncer         syncer.Syncer
 	txpool         *txpool.TxPool
+	blockTime      time.Duration
 }
 
 // Factory implements the base factory method
@@ -53,20 +52,18 @@ func Factory(
 
 		Grpc:           params.Grpc,
 		blockchain:     params.Blockchain,
+		config:         params.Config,
 		executor:       params.Executor,
 		metrics:        params.Metrics,
 		secretsManager: params.SecretsManager,
 		txpool:         params.TxPool,
-	}
-
-	rawInterval, ok := params.Config.Config["interval"]
-	if ok {
-		interval, ok := rawInterval.(uint64)
-		if !ok {
-			return nil, fmt.Errorf("interval expected int")
-		}
-
-		d.interval = interval
+		syncer: syncer.NewSyncer(
+			params.Logger,
+			params.Network,
+			params.Blockchain,
+			time.Duration(params.BlockTime)*3*time.Second,
+		),
+		blockTime: time.Duration(params.BlockTime) * time.Second,
 	}
 
 	return d, nil
@@ -74,7 +71,20 @@ func Factory(
 
 // Initialize initializes the consensus
 func (d *External) Initialize() error {
-	d.txpool.SetSealing(true)
+	// register the grpc operator
+	//	if d.Grpc != nil {
+	//		d.Grpc.RegisterService()
+	//	}
+
+	// start the transport protocol
+	if err := d.setupTransport(); err != nil {
+		return err
+	}
+
+	d.logger.Info("node key", "addr", i.currentSigner.Address().String())
+
+	// Ensure consensus takes into account user configured block production time
+	d.ExtendRoundTimeout(d.blockTime)
 
 	return nil
 }
@@ -86,26 +96,12 @@ func (d *External) Start() error {
 	return nil
 }
 
-func (d *External) nextNotify() chan struct{} {
-	if d.interval == 0 {
-		d.interval = 1
-	}
-
-	go func() {
-		<-time.After(time.Duration(d.interval) * time.Second)
-		d.notifyCh <- struct{}{}
-	}()
-
-	return d.notifyCh
-}
-
 func (d *External) run() {
 	d.logger.Info("consensus started")
 
 	for {
 		// wait until there is a new txn
 		select {
-		case <-d.nextNotify():
 		case <-d.closeCh:
 			return
 		}
