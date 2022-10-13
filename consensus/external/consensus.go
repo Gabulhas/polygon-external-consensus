@@ -7,10 +7,14 @@ import (
 	"github.com/0xPolygon/polygon-edge/blockchain"
 	"github.com/0xPolygon/polygon-edge/consensus"
 	"github.com/0xPolygon/polygon-edge/helper/progress"
+	"github.com/0xPolygon/polygon-edge/network"
+	"github.com/0xPolygon/polygon-edge/secrets"
 	"github.com/0xPolygon/polygon-edge/state"
+	"github.com/0xPolygon/polygon-edge/syncer"
 	"github.com/0xPolygon/polygon-edge/txpool"
 	"github.com/0xPolygon/polygon-edge/types"
 	"github.com/hashicorp/go-hclog"
+	"google.golang.org/grpc"
 )
 
 const (
@@ -18,16 +22,21 @@ const (
 )
 
 type External struct {
-	logger hclog.Logger
+	logger hclog.Logger // Reference to the logging
 
 	notifyCh chan struct{}
 	closeCh  chan struct{}
 
 	interval uint64
-	txpool   *txpool.TxPool
 
-	blockchain *blockchain.Blockchain
-	executor   *state.Executor
+	Grpc           *grpc.Server
+	blockchain     *blockchain.Blockchain
+	executor       *state.Executor
+	metrics        *consensus.Metrics
+	network        *network.Server
+	secretsManager secrets.SecretsManager
+	syncer         syncer.Syncer
+	txpool         *txpool.TxPool
 }
 
 // Factory implements the base factory method
@@ -37,12 +46,17 @@ func Factory(
 	logger := params.Logger.Named("external")
 
 	d := &External{
-		logger:     logger,
-		notifyCh:   make(chan struct{}),
-		closeCh:    make(chan struct{}),
-		blockchain: params.Blockchain,
-		executor:   params.Executor,
-		txpool:     params.TxPool,
+		logger: logger,
+
+		notifyCh: make(chan struct{}),
+		closeCh:  make(chan struct{}),
+
+		Grpc:           params.Grpc,
+		blockchain:     params.Blockchain,
+		executor:       params.Executor,
+		metrics:        params.Metrics,
+		secretsManager: params.SecretsManager,
+		txpool:         params.TxPool,
 	}
 
 	rawInterval, ok := params.Config.Config["interval"]
