@@ -32,4 +32,3 @@ for c in "${nodeStartCommands[@]}";
 do
     eval $c
 done
-
