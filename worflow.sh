@@ -1,13 +1,35 @@
 #!/bin/bash
+# Arguments
+totalNodes=$1
+bootNodes=$2
 
+# Constants
+genesisCommand="./polygon-edge genesis --consensus external --ibft-validators-prefix-path test-chain- --dir temp-stuff/genesis.json"
+
+# Cleanup
+killall polygon-edge
 rm -rf temp-stuff/*
 make build
-./polygon-edge secrets init --data-dir ./temp-stuff/test-chain-1
 
-./polygon-edge genesis --consensus external --ibft-validators-prefix-path test-chain- \
---bootnode /ip4/127.0.0.1/tcp/10001/p2p/16Uiu2HAmN8H1tSofB3FnxdhAd1JRpeLPDT7FvFSbHV8PvrwyYCe5 \
---bootnode /ip4/127.0.0.1/tcp/20001/p2p/16Uiu2HAm8VcctbC3G4BDa5UGEWknVJnyWyP6HxcR58cUmAY6xyom \
---dir temp-stuff/genesis_external.json
+# Create Nodes
+toAddToList=$bootNodes
+nodeStartCommands=()
 
+for ((i=1; i<=$totalNodes; i++)); do
+    nodeID=$(./polygon-edge secrets init --data-dir ./temp-stuff/test-chain-$i| sed -n "s/Node ID.*= \(.*\)/\1/p")
 
-./polygon-edge server --data-dir ./test-chain-1 --chain temp-stuff/genesis_external.json --grpc-address :10000 --libp2p :10001 --jsonrpc :10002 --seal &
+    if test $toAddToList -gt 0
+    then
+        genesisCommand="$genesisCommand --bootnode /ip4/127.0.0.1/tcp/"$i"001/p2p/$nodeID"
+        toAddToList=$((toAddToList-1))
+    fi
+    nodeStartCommands+=("./polygon-edge server --data-dir ./temp-stuff/test-chain-$i --chain ./temp-stuff/genesis.json --grpc-address :"$i"000 --libp2p :"$i"001 --jsonrpc :"$i"002 --seal &")
+done
+
+eval $genesisCommand
+
+for c in "${nodeStartCommands[@]}";
+do
+    eval $c
+done
+
