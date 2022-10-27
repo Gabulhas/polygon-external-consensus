@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Prepare stuff before
-protoc --go_out=. --go-grpc_out=. ./consensus/external/**/*.proto
+#protoc --go_out=. --go-grpc_out=. ./consensus/external/**/*.proto
 
 # Arguments
 totalNodes=$1

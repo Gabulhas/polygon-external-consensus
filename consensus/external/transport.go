@@ -3,8 +3,8 @@ package external
 import (
 	"github.com/0xPolygon/polygon-edge/network"
 	"github.com/0xPolygon/polygon-edge/types"
+	"github.com/Gabulhas/polygon-external-consensus/consensus/external/proto"
 	"github.com/libp2p/go-libp2p/core/peer"
-	"google.golang.org/protobuf/proto"
 )
 
 type transport interface {

@@ -1,4 +1,4 @@
-module github.com/0xPolygon/polygon-edge
+module github.com/Gabulhas/polygon-external-consensus
 
 go 1.18
 
@@ -62,6 +62,7 @@ require (
 
 require (
 	github.com/0xPolygon/go-ibft v0.0.0-20220810095021-e43142f8d267
+	github.com/0xPolygon/polygon-edge v0.0.0-00010101000000-000000000000
 	go.uber.org/atomic v1.10.0
 	gopkg.in/DataDog/dd-trace-go.v1 v1.42.1
 )
@@ -133,6 +134,7 @@ require (
 	github.com/libp2p/go-cidranger v1.1.0 // indirect
 	github.com/libp2p/go-flow-metrics v0.1.0 // indirect
 	github.com/libp2p/go-libp2p-asn-util v0.2.0 // indirect
+	github.com/libp2p/go-libp2p-core v0.20.1 // indirect
 	github.com/libp2p/go-msgio v0.2.0 // indirect
 	github.com/libp2p/go-nat v0.1.0 // indirect
 	github.com/libp2p/go-netroute v0.2.0 // indirect
@@ -199,3 +201,5 @@ require (
 	gopkg.in/square/go-jose.v2 v2.6.0 // indirect
 	gopkg.in/tomb.v1 v1.0.0-20141024135613-dd632973f1e7 // indirect
 )
+
+replace github.com/0xPolygon/polygon-edge => github.com/Gabulhas/polygon-external-consensus v0.0.0-20221013170125-d6d6d81448d0
