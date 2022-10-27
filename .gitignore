@@ -28,5 +28,6 @@ artifacts
 vendor/
 
 polygon-edge
+polygon-external-consensus
 
 temp-stuff/
