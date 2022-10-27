@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/0xPolygon/polygon-edge/secrets"
+	"github.com/Gabulhas/polygon-external-consensus/secrets"
 	"github.com/hashicorp/go-hclog"
 
 	sm "cloud.google.com/go/secretmanager/apiv1"

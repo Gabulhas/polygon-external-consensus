@@ -1,9 +1,10 @@
 package external
 
 import (
-	"github.com/0xPolygon/polygon-edge/network"
-	"github.com/0xPolygon/polygon-edge/types"
+	"fmt"
+
 	"github.com/Gabulhas/polygon-external-consensus/consensus/external/proto"
+	"github.com/Gabulhas/polygon-external-consensus/network"
 	"github.com/libp2p/go-libp2p/core/peer"
 )
 
@@ -36,26 +37,24 @@ func (i *External) setupTransport() error {
 	// Subscribe to the newly created topic
 	if err := topic.Subscribe(
 		func(obj interface{}, _ peer.ID) {
-			if !i.isActiveValidator() {
-				return
-			}
 
 			msg, ok := obj.(*proto.Message)
+			fmt.Printf("msg: %v\n", msg)
 			if !ok {
 				i.logger.Error("invalid type assertion for message request")
 
 				return
 			}
 
-			i.consensus.AddMessage(msg)
-
-			i.logger.Debug(
-				"validator message received",
-				"type", msg.Type.String(),
-				"height", msg.GetView().Height,
-				"round", msg.GetView().Round,
-				"addr", types.BytesToAddress(msg.From).String(),
-			)
+			//			i.consensus.AddMessage(msg)
+			//
+			//			i.logger.Debug(
+			//				"validator message received",
+			//				"type", msg.Type.String(),
+			//				"height", msg.GetView().Height,
+			//				"round", msg.GetView().Round,
+			//				"addr", types.BytesToAddress(msg.From).String(),
+			//			)
 		},
 	); err != nil {
 		return err

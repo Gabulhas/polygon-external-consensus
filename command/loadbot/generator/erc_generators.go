@@ -4,7 +4,7 @@ import (
 	"encoding/hex"
 	"fmt"
 
-	"github.com/0xPolygon/polygon-edge/crypto"
+	"github.com/Gabulhas/polygon-external-consensus/crypto"
 )
 
 // call ERC20 contract method and encode parameters

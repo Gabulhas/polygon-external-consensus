@@ -6,9 +6,9 @@ import (
 
 	"github.com/umbracle/ethgo"
 
-	"github.com/0xPolygon/polygon-edge/contracts/abis"
-	"github.com/0xPolygon/polygon-edge/state/runtime"
-	"github.com/0xPolygon/polygon-edge/types"
+	"github.com/Gabulhas/polygon-external-consensus/contracts/abis"
+	"github.com/Gabulhas/polygon-external-consensus/state/runtime"
+	"github.com/Gabulhas/polygon-external-consensus/types"
 	"github.com/umbracle/ethgo/abi"
 )
 

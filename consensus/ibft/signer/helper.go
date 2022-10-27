@@ -5,12 +5,12 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/0xPolygon/polygon-edge/crypto"
-	"github.com/0xPolygon/polygon-edge/helper/keccak"
-	"github.com/0xPolygon/polygon-edge/secrets"
-	"github.com/0xPolygon/polygon-edge/secrets/helper"
-	"github.com/0xPolygon/polygon-edge/types"
-	"github.com/0xPolygon/polygon-edge/validators"
+	"github.com/Gabulhas/polygon-external-consensus/crypto"
+	"github.com/Gabulhas/polygon-external-consensus/helper/keccak"
+	"github.com/Gabulhas/polygon-external-consensus/secrets"
+	"github.com/Gabulhas/polygon-external-consensus/secrets/helper"
+	"github.com/Gabulhas/polygon-external-consensus/types"
+	"github.com/Gabulhas/polygon-external-consensus/validators"
 	"github.com/coinbase/kryptology/pkg/signatures/bls/bls_sig"
 	"github.com/umbracle/fastrlp"
 )

@@ -6,11 +6,11 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/0xPolygon/polygon-edge/command"
-	"github.com/0xPolygon/polygon-edge/helper/common"
-	"github.com/0xPolygon/polygon-edge/secrets"
-	"github.com/0xPolygon/polygon-edge/secrets/helper"
-	"github.com/0xPolygon/polygon-edge/types"
+	"github.com/Gabulhas/polygon-external-consensus/command"
+	"github.com/Gabulhas/polygon-external-consensus/helper/common"
+	"github.com/Gabulhas/polygon-external-consensus/secrets"
+	"github.com/Gabulhas/polygon-external-consensus/secrets/helper"
+	"github.com/Gabulhas/polygon-external-consensus/types"
 )
 
 const (

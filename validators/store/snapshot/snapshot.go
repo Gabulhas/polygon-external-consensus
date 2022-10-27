@@ -6,9 +6,9 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/0xPolygon/polygon-edge/types"
-	"github.com/0xPolygon/polygon-edge/validators"
-	"github.com/0xPolygon/polygon-edge/validators/store"
+	"github.com/Gabulhas/polygon-external-consensus/types"
+	"github.com/Gabulhas/polygon-external-consensus/validators"
+	"github.com/Gabulhas/polygon-external-consensus/validators/store"
 	"github.com/hashicorp/go-hclog"
 )
 

@@ -202,4 +202,3 @@ require (
 	gopkg.in/tomb.v1 v1.0.0-20141024135613-dd632973f1e7 // indirect
 )
 
-replace github.com/0xPolygon/polygon-edge => github.com/Gabulhas/polygon-external-consensus v0.0.0-20221013170125-d6d6d81448d0

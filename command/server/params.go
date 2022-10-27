@@ -4,11 +4,11 @@ import (
 	"errors"
 	"net"
 
-	"github.com/0xPolygon/polygon-edge/chain"
-	"github.com/0xPolygon/polygon-edge/command/server/config"
-	"github.com/0xPolygon/polygon-edge/network"
-	"github.com/0xPolygon/polygon-edge/secrets"
-	"github.com/0xPolygon/polygon-edge/server"
+	"github.com/Gabulhas/polygon-external-consensus/chain"
+	"github.com/Gabulhas/polygon-external-consensus/command/server/config"
+	"github.com/Gabulhas/polygon-external-consensus/network"
+	"github.com/Gabulhas/polygon-external-consensus/secrets"
+	"github.com/Gabulhas/polygon-external-consensus/server"
 	"github.com/hashicorp/go-hclog"
 	"github.com/multiformats/go-multiaddr"
 )

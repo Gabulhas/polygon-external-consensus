@@ -4,12 +4,12 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/0xPolygon/polygon-edge/blockchain"
-	"github.com/0xPolygon/polygon-edge/consensus"
-	"github.com/0xPolygon/polygon-edge/helper/progress"
-	"github.com/0xPolygon/polygon-edge/state"
-	"github.com/0xPolygon/polygon-edge/txpool"
-	"github.com/0xPolygon/polygon-edge/types"
+	"github.com/Gabulhas/polygon-external-consensus/blockchain"
+	"github.com/Gabulhas/polygon-external-consensus/consensus"
+	"github.com/Gabulhas/polygon-external-consensus/helper/progress"
+	"github.com/Gabulhas/polygon-external-consensus/state"
+	"github.com/Gabulhas/polygon-external-consensus/txpool"
+	"github.com/Gabulhas/polygon-external-consensus/types"
 	"github.com/hashicorp/go-hclog"
 )
 

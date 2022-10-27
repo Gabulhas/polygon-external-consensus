@@ -6,9 +6,9 @@ import (
 	"math/big"
 	"math/bits"
 
-	"github.com/0xPolygon/polygon-edge/chain"
-	"github.com/0xPolygon/polygon-edge/helper/keccak"
-	"github.com/0xPolygon/polygon-edge/types"
+	"github.com/Gabulhas/polygon-external-consensus/chain"
+	"github.com/Gabulhas/polygon-external-consensus/helper/keccak"
+	"github.com/Gabulhas/polygon-external-consensus/types"
 	"github.com/umbracle/fastrlp"
 )
 

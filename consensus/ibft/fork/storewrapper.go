@@ -3,11 +3,11 @@ package fork
 import (
 	"path/filepath"
 
-	"github.com/0xPolygon/polygon-edge/consensus/ibft/signer"
-	"github.com/0xPolygon/polygon-edge/validators"
-	"github.com/0xPolygon/polygon-edge/validators/store"
-	"github.com/0xPolygon/polygon-edge/validators/store/contract"
-	"github.com/0xPolygon/polygon-edge/validators/store/snapshot"
+	"github.com/Gabulhas/polygon-external-consensus/consensus/ibft/signer"
+	"github.com/Gabulhas/polygon-external-consensus/validators"
+	"github.com/Gabulhas/polygon-external-consensus/validators/store"
+	"github.com/Gabulhas/polygon-external-consensus/validators/store/contract"
+	"github.com/Gabulhas/polygon-external-consensus/validators/store/snapshot"
 	"github.com/hashicorp/go-hclog"
 )
 

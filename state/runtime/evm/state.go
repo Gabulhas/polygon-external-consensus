@@ -7,10 +7,10 @@ import (
 
 	"sync"
 
-	"github.com/0xPolygon/polygon-edge/chain"
-	"github.com/0xPolygon/polygon-edge/helper/hex"
-	"github.com/0xPolygon/polygon-edge/state/runtime"
-	"github.com/0xPolygon/polygon-edge/types"
+	"github.com/Gabulhas/polygon-external-consensus/chain"
+	"github.com/Gabulhas/polygon-external-consensus/helper/hex"
+	"github.com/Gabulhas/polygon-external-consensus/state/runtime"
+	"github.com/Gabulhas/polygon-external-consensus/types"
 )
 
 var statePool = sync.Pool{

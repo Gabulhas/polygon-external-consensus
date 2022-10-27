@@ -7,8 +7,8 @@ import (
 	"path/filepath"
 	"sync"
 
-	"github.com/0xPolygon/polygon-edge/helper/common"
-	"github.com/0xPolygon/polygon-edge/secrets"
+	"github.com/Gabulhas/polygon-external-consensus/helper/common"
+	"github.com/Gabulhas/polygon-external-consensus/secrets"
 	"github.com/hashicorp/go-hclog"
 )
 

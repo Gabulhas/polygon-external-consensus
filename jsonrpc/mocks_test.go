@@ -5,9 +5,9 @@ import (
 	"math/big"
 	"sync"
 
-	"github.com/0xPolygon/polygon-edge/blockchain"
-	"github.com/0xPolygon/polygon-edge/state"
-	"github.com/0xPolygon/polygon-edge/types"
+	"github.com/Gabulhas/polygon-external-consensus/blockchain"
+	"github.com/Gabulhas/polygon-external-consensus/state"
+	"github.com/Gabulhas/polygon-external-consensus/types"
 )
 
 type mockAccount struct {

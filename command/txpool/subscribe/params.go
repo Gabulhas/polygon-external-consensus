@@ -1,6 +1,6 @@
 package subscribe
 
-import "github.com/0xPolygon/polygon-edge/txpool/proto"
+import "github.com/Gabulhas/polygon-external-consensus/txpool/proto"
 
 var (
 	params = &subscribeParams{}

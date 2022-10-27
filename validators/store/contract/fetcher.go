@@ -3,11 +3,11 @@ package contract
 import (
 	"fmt"
 
-	"github.com/0xPolygon/polygon-edge/contracts/staking"
-	"github.com/0xPolygon/polygon-edge/crypto"
-	"github.com/0xPolygon/polygon-edge/state"
-	"github.com/0xPolygon/polygon-edge/types"
-	"github.com/0xPolygon/polygon-edge/validators"
+	"github.com/Gabulhas/polygon-external-consensus/contracts/staking"
+	"github.com/Gabulhas/polygon-external-consensus/crypto"
+	"github.com/Gabulhas/polygon-external-consensus/state"
+	"github.com/Gabulhas/polygon-external-consensus/types"
+	"github.com/Gabulhas/polygon-external-consensus/validators"
 )
 
 // FetchValidators fetches validators from a contract switched by validator type

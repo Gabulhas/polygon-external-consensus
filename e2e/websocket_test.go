@@ -6,9 +6,9 @@ import (
 	"math/big"
 	"testing"
 
-	"github.com/0xPolygon/polygon-edge/e2e/framework"
-	"github.com/0xPolygon/polygon-edge/jsonrpc"
-	"github.com/0xPolygon/polygon-edge/types"
+	"github.com/Gabulhas/polygon-external-consensus/e2e/framework"
+	"github.com/Gabulhas/polygon-external-consensus/jsonrpc"
+	"github.com/Gabulhas/polygon-external-consensus/types"
 	"github.com/gorilla/websocket"
 	"github.com/stretchr/testify/assert"
 )

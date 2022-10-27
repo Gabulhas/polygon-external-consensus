@@ -6,16 +6,16 @@ import (
 	"math"
 	"net"
 
-	"github.com/0xPolygon/polygon-edge/command/server/config"
+	"github.com/Gabulhas/polygon-external-consensus/command/server/config"
 
-	"github.com/0xPolygon/polygon-edge/network/common"
+	"github.com/Gabulhas/polygon-external-consensus/network/common"
 
-	"github.com/0xPolygon/polygon-edge/chain"
-	"github.com/0xPolygon/polygon-edge/command/helper"
-	"github.com/0xPolygon/polygon-edge/network"
-	"github.com/0xPolygon/polygon-edge/secrets"
-	"github.com/0xPolygon/polygon-edge/server"
-	"github.com/0xPolygon/polygon-edge/types"
+	"github.com/Gabulhas/polygon-external-consensus/chain"
+	"github.com/Gabulhas/polygon-external-consensus/command/helper"
+	"github.com/Gabulhas/polygon-external-consensus/network"
+	"github.com/Gabulhas/polygon-external-consensus/secrets"
+	"github.com/Gabulhas/polygon-external-consensus/server"
+	"github.com/Gabulhas/polygon-external-consensus/types"
 )
 
 var (

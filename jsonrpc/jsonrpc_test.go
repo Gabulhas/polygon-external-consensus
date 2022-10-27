@@ -6,8 +6,8 @@ import (
 	"net"
 	"testing"
 
-	"github.com/0xPolygon/polygon-edge/helper/tests"
-	"github.com/0xPolygon/polygon-edge/versioning"
+	"github.com/Gabulhas/polygon-external-consensus/helper/tests"
+	"github.com/Gabulhas/polygon-external-consensus/versioning"
 	"github.com/stretchr/testify/assert"
 
 	"github.com/hashicorp/go-hclog"

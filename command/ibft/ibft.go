@@ -1,13 +1,13 @@
 package ibft
 
 import (
-	"github.com/0xPolygon/polygon-edge/command/helper"
-	"github.com/0xPolygon/polygon-edge/command/ibft/candidates"
-	"github.com/0xPolygon/polygon-edge/command/ibft/propose"
-	"github.com/0xPolygon/polygon-edge/command/ibft/quorum"
-	"github.com/0xPolygon/polygon-edge/command/ibft/snapshot"
-	"github.com/0xPolygon/polygon-edge/command/ibft/status"
-	_switch "github.com/0xPolygon/polygon-edge/command/ibft/switch"
+	"github.com/Gabulhas/polygon-external-consensus/command/helper"
+	"github.com/Gabulhas/polygon-external-consensus/command/ibft/candidates"
+	"github.com/Gabulhas/polygon-external-consensus/command/ibft/propose"
+	"github.com/Gabulhas/polygon-external-consensus/command/ibft/quorum"
+	"github.com/Gabulhas/polygon-external-consensus/command/ibft/snapshot"
+	"github.com/Gabulhas/polygon-external-consensus/command/ibft/status"
+	_switch "github.com/Gabulhas/polygon-external-consensus/command/ibft/switch"
 	"github.com/spf13/cobra"
 )
 

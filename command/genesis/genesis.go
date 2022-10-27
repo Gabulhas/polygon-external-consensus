@@ -3,12 +3,12 @@ package genesis
 import (
 	"fmt"
 
-	"github.com/0xPolygon/polygon-edge/command"
-	"github.com/0xPolygon/polygon-edge/command/genesis/predeploy"
-	"github.com/0xPolygon/polygon-edge/command/helper"
-	"github.com/0xPolygon/polygon-edge/consensus/ibft"
-	"github.com/0xPolygon/polygon-edge/helper/common"
-	"github.com/0xPolygon/polygon-edge/validators"
+	"github.com/Gabulhas/polygon-external-consensus/command"
+	"github.com/Gabulhas/polygon-external-consensus/command/genesis/predeploy"
+	"github.com/Gabulhas/polygon-external-consensus/command/helper"
+	"github.com/Gabulhas/polygon-external-consensus/consensus/ibft"
+	"github.com/Gabulhas/polygon-external-consensus/helper/common"
+	"github.com/Gabulhas/polygon-external-consensus/validators"
 	"github.com/spf13/cobra"
 )
 

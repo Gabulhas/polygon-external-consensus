@@ -1,7 +1,7 @@
 package output
 
 import (
-	"github.com/0xPolygon/polygon-edge/command"
+	"github.com/Gabulhas/polygon-external-consensus/command"
 	"github.com/spf13/cobra"
 )
 

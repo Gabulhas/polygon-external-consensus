@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"fmt"
 
-	"github.com/0xPolygon/polygon-edge/licenses"
+	"github.com/Gabulhas/polygon-external-consensus/licenses"
 )
 
 type LicenseResult struct {

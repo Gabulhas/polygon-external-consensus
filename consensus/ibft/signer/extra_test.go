@@ -5,8 +5,8 @@ import (
 	"math/big"
 	"testing"
 
-	"github.com/0xPolygon/polygon-edge/types"
-	"github.com/0xPolygon/polygon-edge/validators"
+	"github.com/Gabulhas/polygon-external-consensus/types"
+	"github.com/Gabulhas/polygon-external-consensus/validators"
 	"github.com/stretchr/testify/assert"
 )
 

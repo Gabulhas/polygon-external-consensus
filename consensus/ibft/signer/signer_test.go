@@ -6,10 +6,10 @@ import (
 	"math/big"
 	"testing"
 
-	"github.com/0xPolygon/polygon-edge/crypto"
-	testHelper "github.com/0xPolygon/polygon-edge/helper/tests"
-	"github.com/0xPolygon/polygon-edge/types"
-	"github.com/0xPolygon/polygon-edge/validators"
+	"github.com/Gabulhas/polygon-external-consensus/crypto"
+	testHelper "github.com/Gabulhas/polygon-external-consensus/helper/tests"
+	"github.com/Gabulhas/polygon-external-consensus/types"
+	"github.com/Gabulhas/polygon-external-consensus/validators"
 	"github.com/stretchr/testify/assert"
 )
 

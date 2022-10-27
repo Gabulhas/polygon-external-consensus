@@ -9,13 +9,13 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/0xPolygon/polygon-edge/chain"
-	"github.com/0xPolygon/polygon-edge/crypto"
-	"github.com/0xPolygon/polygon-edge/helper/hex"
-	"github.com/0xPolygon/polygon-edge/state"
-	itrie "github.com/0xPolygon/polygon-edge/state/immutable-trie"
-	"github.com/0xPolygon/polygon-edge/state/runtime"
-	"github.com/0xPolygon/polygon-edge/types"
+	"github.com/Gabulhas/polygon-external-consensus/chain"
+	"github.com/Gabulhas/polygon-external-consensus/crypto"
+	"github.com/Gabulhas/polygon-external-consensus/helper/hex"
+	"github.com/Gabulhas/polygon-external-consensus/state"
+	itrie "github.com/Gabulhas/polygon-external-consensus/state/immutable-trie"
+	"github.com/Gabulhas/polygon-external-consensus/state/runtime"
+	"github.com/Gabulhas/polygon-external-consensus/types"
 )
 
 // TESTS is the default location of the tests folder

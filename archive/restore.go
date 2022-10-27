@@ -7,10 +7,10 @@ import (
 	"math/big"
 	"os"
 
-	"github.com/0xPolygon/polygon-edge/blockchain"
-	"github.com/0xPolygon/polygon-edge/helper/common"
-	"github.com/0xPolygon/polygon-edge/helper/progress"
-	"github.com/0xPolygon/polygon-edge/types"
+	"github.com/Gabulhas/polygon-external-consensus/blockchain"
+	"github.com/Gabulhas/polygon-external-consensus/helper/common"
+	"github.com/Gabulhas/polygon-external-consensus/helper/progress"
+	"github.com/Gabulhas/polygon-external-consensus/types"
 )
 
 const (

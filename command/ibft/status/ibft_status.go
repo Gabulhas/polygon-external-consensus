@@ -3,9 +3,9 @@ package status
 import (
 	"context"
 
-	"github.com/0xPolygon/polygon-edge/command"
-	"github.com/0xPolygon/polygon-edge/command/helper"
-	ibftOp "github.com/0xPolygon/polygon-edge/consensus/ibft/proto"
+	"github.com/Gabulhas/polygon-external-consensus/command"
+	"github.com/Gabulhas/polygon-external-consensus/command/helper"
+	ibftOp "github.com/Gabulhas/polygon-external-consensus/consensus/ibft/proto"
 	"github.com/spf13/cobra"
 	empty "google.golang.org/protobuf/types/known/emptypb"
 )

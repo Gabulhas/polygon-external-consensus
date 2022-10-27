@@ -7,11 +7,11 @@ import (
 	"testing"
 	"time"
 
-	"github.com/0xPolygon/polygon-edge/consensus/ibft/fork"
-	ibftOp "github.com/0xPolygon/polygon-edge/consensus/ibft/proto"
-	"github.com/0xPolygon/polygon-edge/crypto"
-	"github.com/0xPolygon/polygon-edge/e2e/framework"
-	"github.com/0xPolygon/polygon-edge/types"
+	"github.com/Gabulhas/polygon-external-consensus/consensus/ibft/fork"
+	ibftOp "github.com/Gabulhas/polygon-external-consensus/consensus/ibft/proto"
+	"github.com/Gabulhas/polygon-external-consensus/crypto"
+	"github.com/Gabulhas/polygon-external-consensus/e2e/framework"
+	"github.com/Gabulhas/polygon-external-consensus/types"
 	"github.com/stretchr/testify/assert"
 )
 

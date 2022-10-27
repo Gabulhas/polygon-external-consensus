@@ -10,12 +10,12 @@ import (
 	"github.com/libp2p/go-libp2p/core/peer"
 	"github.com/stretchr/testify/assert"
 
-	"github.com/0xPolygon/polygon-edge/blockchain"
-	"github.com/0xPolygon/polygon-edge/network"
-	"github.com/0xPolygon/polygon-edge/network/event"
-	"github.com/0xPolygon/polygon-edge/network/grpc"
-	"github.com/0xPolygon/polygon-edge/syncer/proto"
-	"github.com/0xPolygon/polygon-edge/types"
+	"github.com/Gabulhas/polygon-external-consensus/blockchain"
+	"github.com/Gabulhas/polygon-external-consensus/network"
+	"github.com/Gabulhas/polygon-external-consensus/network/event"
+	"github.com/Gabulhas/polygon-external-consensus/network/grpc"
+	"github.com/Gabulhas/polygon-external-consensus/syncer/proto"
+	"github.com/Gabulhas/polygon-external-consensus/types"
 )
 
 var (

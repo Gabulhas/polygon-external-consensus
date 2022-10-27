@@ -8,13 +8,13 @@ import (
 	"math/big"
 	"os"
 
-	"github.com/0xPolygon/polygon-edge/chain"
-	"github.com/0xPolygon/polygon-edge/helper/hex"
-	"github.com/0xPolygon/polygon-edge/state"
-	itrie "github.com/0xPolygon/polygon-edge/state/immutable-trie"
-	"github.com/0xPolygon/polygon-edge/state/runtime"
-	"github.com/0xPolygon/polygon-edge/state/runtime/evm"
-	"github.com/0xPolygon/polygon-edge/types"
+	"github.com/Gabulhas/polygon-external-consensus/chain"
+	"github.com/Gabulhas/polygon-external-consensus/helper/hex"
+	"github.com/Gabulhas/polygon-external-consensus/state"
+	itrie "github.com/Gabulhas/polygon-external-consensus/state/immutable-trie"
+	"github.com/Gabulhas/polygon-external-consensus/state/runtime"
+	"github.com/Gabulhas/polygon-external-consensus/state/runtime/evm"
+	"github.com/Gabulhas/polygon-external-consensus/types"
 	"github.com/umbracle/ethgo/abi"
 )
 

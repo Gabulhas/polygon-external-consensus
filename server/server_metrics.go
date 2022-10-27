@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/0xPolygon/polygon-edge/consensus"
-	"github.com/0xPolygon/polygon-edge/network"
-	"github.com/0xPolygon/polygon-edge/txpool"
+	"github.com/Gabulhas/polygon-external-consensus/consensus"
+	"github.com/Gabulhas/polygon-external-consensus/network"
+	"github.com/Gabulhas/polygon-external-consensus/txpool"
 	"gopkg.in/DataDog/dd-trace-go.v1/ddtrace/tracer"
 	"gopkg.in/DataDog/dd-trace-go.v1/profiler"
 )

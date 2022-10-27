@@ -6,8 +6,8 @@ import (
 	"fmt"
 	"testing"
 
-	testHelper "github.com/0xPolygon/polygon-edge/helper/tests"
-	"github.com/0xPolygon/polygon-edge/types"
+	testHelper "github.com/Gabulhas/polygon-external-consensus/helper/tests"
+	"github.com/Gabulhas/polygon-external-consensus/types"
 	"github.com/stretchr/testify/assert"
 )
 

@@ -6,8 +6,8 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/0xPolygon/polygon-edge/command"
-	"github.com/0xPolygon/polygon-edge/command/server/config"
+	"github.com/Gabulhas/polygon-external-consensus/command"
+	"github.com/Gabulhas/polygon-external-consensus/command/server/config"
 	"github.com/spf13/cobra"
 	"gopkg.in/yaml.v3"
 )

@@ -7,15 +7,15 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/0xPolygon/polygon-edge/state"
+	"github.com/Gabulhas/polygon-external-consensus/state"
 	"github.com/hashicorp/go-hclog"
 
-	"github.com/0xPolygon/polygon-edge/chain"
+	"github.com/Gabulhas/polygon-external-consensus/chain"
 	"github.com/stretchr/testify/assert"
 
-	"github.com/0xPolygon/polygon-edge/blockchain/storage"
-	"github.com/0xPolygon/polygon-edge/blockchain/storage/memory"
-	"github.com/0xPolygon/polygon-edge/types"
+	"github.com/Gabulhas/polygon-external-consensus/blockchain/storage"
+	"github.com/Gabulhas/polygon-external-consensus/blockchain/storage/memory"
+	"github.com/Gabulhas/polygon-external-consensus/types"
 )
 
 func TestGenesis(t *testing.T) {

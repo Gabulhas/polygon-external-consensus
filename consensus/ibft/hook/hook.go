@@ -1,8 +1,8 @@
 package hook
 
 import (
-	"github.com/0xPolygon/polygon-edge/state"
-	"github.com/0xPolygon/polygon-edge/types"
+	"github.com/Gabulhas/polygon-external-consensus/state"
+	"github.com/Gabulhas/polygon-external-consensus/types"
 )
 
 type ShouldWriteTransactionsFunc func(uint64) bool

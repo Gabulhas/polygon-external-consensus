@@ -3,7 +3,7 @@ package memory
 import (
 	"testing"
 
-	"github.com/0xPolygon/polygon-edge/blockchain/storage"
+	"github.com/Gabulhas/polygon-external-consensus/blockchain/storage"
 )
 
 func TestStorage(t *testing.T) {

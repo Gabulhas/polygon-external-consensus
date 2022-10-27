@@ -1,16 +1,16 @@
 package server
 
 import (
-	"github.com/0xPolygon/polygon-edge/consensus"
-	consensusDev "github.com/0xPolygon/polygon-edge/consensus/dev"
-	consensusDummy "github.com/0xPolygon/polygon-edge/consensus/dummy"
-	consensusExternal "github.com/0xPolygon/polygon-edge/consensus/external"
-	consensusIBFT "github.com/0xPolygon/polygon-edge/consensus/ibft"
-	"github.com/0xPolygon/polygon-edge/secrets"
-	"github.com/0xPolygon/polygon-edge/secrets/awsssm"
-	"github.com/0xPolygon/polygon-edge/secrets/gcpssm"
-	"github.com/0xPolygon/polygon-edge/secrets/hashicorpvault"
-	"github.com/0xPolygon/polygon-edge/secrets/local"
+	"github.com/Gabulhas/polygon-external-consensus/consensus"
+	consensusDev "github.com/Gabulhas/polygon-external-consensus/consensus/dev"
+	consensusDummy "github.com/Gabulhas/polygon-external-consensus/consensus/dummy"
+	consensusExternal "github.com/Gabulhas/polygon-external-consensus/consensus/external"
+	consensusIBFT "github.com/Gabulhas/polygon-external-consensus/consensus/ibft"
+	"github.com/Gabulhas/polygon-external-consensus/secrets"
+	"github.com/Gabulhas/polygon-external-consensus/secrets/awsssm"
+	"github.com/Gabulhas/polygon-external-consensus/secrets/gcpssm"
+	"github.com/Gabulhas/polygon-external-consensus/secrets/hashicorpvault"
+	"github.com/Gabulhas/polygon-external-consensus/secrets/local"
 )
 
 type ConsensusType string

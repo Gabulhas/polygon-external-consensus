@@ -5,9 +5,9 @@ import (
 	"os"
 	"strings"
 
-	"github.com/0xPolygon/polygon-edge/crypto"
-	txpoolOp "github.com/0xPolygon/polygon-edge/txpool/proto"
-	"github.com/0xPolygon/polygon-edge/types"
+	"github.com/Gabulhas/polygon-external-consensus/crypto"
+	txpoolOp "github.com/Gabulhas/polygon-external-consensus/txpool/proto"
+	"github.com/Gabulhas/polygon-external-consensus/types"
 	"github.com/umbracle/ethgo/jsonrpc"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"

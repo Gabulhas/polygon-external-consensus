@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"fmt"
 
-	"github.com/0xPolygon/polygon-edge/command/helper"
+	"github.com/Gabulhas/polygon-external-consensus/command/helper"
 )
 
 type TxPoolStatusResult struct {

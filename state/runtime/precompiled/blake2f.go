@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"math/bits"
 
-	"github.com/0xPolygon/polygon-edge/chain"
+	"github.com/Gabulhas/polygon-external-consensus/chain"
 )
 
 type blake2f struct {

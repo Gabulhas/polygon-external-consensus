@@ -3,7 +3,7 @@ package generator
 import (
 	"sync"
 
-	"github.com/0xPolygon/polygon-edge/crypto"
+	"github.com/Gabulhas/polygon-external-consensus/crypto"
 )
 
 type BaseGenerator struct {

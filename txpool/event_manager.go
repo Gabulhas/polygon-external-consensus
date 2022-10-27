@@ -5,8 +5,8 @@ import (
 	"sync"
 	"sync/atomic"
 
-	"github.com/0xPolygon/polygon-edge/txpool/proto"
-	"github.com/0xPolygon/polygon-edge/types"
+	"github.com/Gabulhas/polygon-external-consensus/txpool/proto"
+	"github.com/Gabulhas/polygon-external-consensus/types"
 	"github.com/google/uuid"
 	"github.com/hashicorp/go-hclog"
 )

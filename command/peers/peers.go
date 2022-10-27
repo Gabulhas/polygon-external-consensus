@@ -1,10 +1,10 @@
 package peers
 
 import (
-	"github.com/0xPolygon/polygon-edge/command/helper"
-	"github.com/0xPolygon/polygon-edge/command/peers/add"
-	"github.com/0xPolygon/polygon-edge/command/peers/list"
-	"github.com/0xPolygon/polygon-edge/command/peers/status"
+	"github.com/Gabulhas/polygon-external-consensus/command/helper"
+	"github.com/Gabulhas/polygon-external-consensus/command/peers/add"
+	"github.com/Gabulhas/polygon-external-consensus/command/peers/list"
+	"github.com/Gabulhas/polygon-external-consensus/command/peers/status"
 	"github.com/spf13/cobra"
 )
 

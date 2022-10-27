@@ -11,13 +11,13 @@ import (
 
 	"github.com/umbracle/ethgo"
 
-	"github.com/0xPolygon/polygon-edge/command/loadbot/generator"
-	"github.com/0xPolygon/polygon-edge/helper/tests"
-	txpoolOp "github.com/0xPolygon/polygon-edge/txpool/proto"
+	"github.com/Gabulhas/polygon-external-consensus/command/loadbot/generator"
+	"github.com/Gabulhas/polygon-external-consensus/helper/tests"
+	txpoolOp "github.com/Gabulhas/polygon-external-consensus/txpool/proto"
 	"github.com/golang/protobuf/ptypes/any"
 	"github.com/umbracle/ethgo/jsonrpc"
 
-	"github.com/0xPolygon/polygon-edge/types"
+	"github.com/Gabulhas/polygon-external-consensus/types"
 )
 
 const (

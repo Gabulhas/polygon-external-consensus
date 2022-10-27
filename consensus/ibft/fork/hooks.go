@@ -3,14 +3,14 @@ package fork
 import (
 	"errors"
 
-	"github.com/0xPolygon/polygon-edge/consensus/ibft/hook"
-	"github.com/0xPolygon/polygon-edge/contracts/staking"
-	"github.com/0xPolygon/polygon-edge/helper/hex"
-	stakingHelper "github.com/0xPolygon/polygon-edge/helper/staking"
-	"github.com/0xPolygon/polygon-edge/state"
-	"github.com/0xPolygon/polygon-edge/types"
-	"github.com/0xPolygon/polygon-edge/validators"
-	"github.com/0xPolygon/polygon-edge/validators/store"
+	"github.com/Gabulhas/polygon-external-consensus/consensus/ibft/hook"
+	"github.com/Gabulhas/polygon-external-consensus/contracts/staking"
+	"github.com/Gabulhas/polygon-external-consensus/helper/hex"
+	stakingHelper "github.com/Gabulhas/polygon-external-consensus/helper/staking"
+	"github.com/Gabulhas/polygon-external-consensus/state"
+	"github.com/Gabulhas/polygon-external-consensus/types"
+	"github.com/Gabulhas/polygon-external-consensus/validators"
+	"github.com/Gabulhas/polygon-external-consensus/validators/store"
 )
 
 var (

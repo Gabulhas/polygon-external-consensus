@@ -3,7 +3,7 @@ package fork
 import (
 	"fmt"
 
-	"github.com/0xPolygon/polygon-edge/validators/store"
+	"github.com/Gabulhas/polygon-external-consensus/validators/store"
 )
 
 // Define the type of the IBFT consensus

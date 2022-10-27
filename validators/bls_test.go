@@ -6,8 +6,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/0xPolygon/polygon-edge/helper/hex"
-	"github.com/0xPolygon/polygon-edge/types"
+	"github.com/Gabulhas/polygon-external-consensus/helper/hex"
+	"github.com/Gabulhas/polygon-external-consensus/types"
 	"github.com/stretchr/testify/assert"
 )
 

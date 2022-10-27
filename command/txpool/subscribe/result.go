@@ -4,8 +4,8 @@ import (
 	"bytes"
 	"fmt"
 
-	"github.com/0xPolygon/polygon-edge/command/helper"
-	txpoolProto "github.com/0xPolygon/polygon-edge/txpool/proto"
+	"github.com/Gabulhas/polygon-external-consensus/command/helper"
+	txpoolProto "github.com/Gabulhas/polygon-external-consensus/txpool/proto"
 )
 
 type TxPoolEventResult struct {
