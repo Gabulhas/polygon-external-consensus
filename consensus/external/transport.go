@@ -1,23 +1,34 @@
 package external
 
 import (
+	"github.com/0xPolygon/polygon-edge/network"
 	"github.com/0xPolygon/polygon-edge/types"
-	"github.com/libp2p/go-libp2p-core/peer"
+	"github.com/libp2p/go-libp2p/core/peer"
 	"google.golang.org/protobuf/proto"
 )
 
-const (
-	DefaultEpochSize = 100000
-	IbftKeyName      = "node.key"
-	KeyEpochSize     = "epochSize"
+type transport interface {
+	Multicast(msg *proto.Message) error
+}
 
-	ibftProto = "/external/0.2"
-)
+type gossipTransport struct {
+	topic *network.Topic
+}
+
+func (g *gossipTransport) Multicast(msg *proto.Message) error {
+	return g.topic.Publish(msg)
+}
+
+func (d *External) Multicast(msg *proto.Message) {
+	if err := d.transport.Multicast(msg); err != nil {
+		d.logger.Error("fail to gossip", "err", err)
+	}
+}
 
 // setupTransport sets up the gossip transport protocol
-func (d *External) setupTransport() error {
+func (i *External) setupTransport() error {
 	// Define a new topic
-	topic, err := i.network.NewTopic(ibftProto, &proto.Message{})
+	topic, err := i.network.NewTopic(externalProto, &proto.Message{})
 	if err != nil {
 		return err
 	}

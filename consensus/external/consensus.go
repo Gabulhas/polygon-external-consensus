@@ -18,6 +18,7 @@ import (
 
 const (
 	externalConsensus = "external-consensus"
+	externalProto     = "/external/0.1"
 )
 
 type External struct {
@@ -35,6 +36,7 @@ type External struct {
 	secretsManager secrets.SecretsManager
 	syncer         syncer.Syncer
 	txpool         *txpool.TxPool
+	transport      transport
 	blockTime      time.Duration
 }
 
@@ -80,11 +82,6 @@ func (d *External) Initialize() error {
 	if err := d.setupTransport(); err != nil {
 		return err
 	}
-
-	d.logger.Info("node key", "addr", i.currentSigner.Address().String())
-
-	// Ensure consensus takes into account user configured block production time
-	d.ExtendRoundTimeout(d.blockTime)
 
 	return nil
 }
