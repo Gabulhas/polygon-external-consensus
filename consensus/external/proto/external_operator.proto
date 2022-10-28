@@ -39,37 +39,48 @@ message Message {
 
   // payload is the specific message payload
   oneof payload {
-    PrePrepareMessage preprepareData = 5;
-    PrepareMessage prepareData = 6;
-    CommitMessage commitData = 7;
-    RoundChangeMessage roundChangeData = 8;
+      SendBlock sendBlock = 5
+      Version version = 6
+      Addr addr = 7
+      GetAddr getAddr = 8
+      GetBlocks getBlocks = 9
   }
 }
 
-// PrePrepareMessage is the message for the PREPREPARE phase
-message PrePrepareMessage {
-  // proposal is the actual data being proposed for consensus
-  bytes proposal = 1;
-
-  // proposalHash is the Keccak hash of the proposal
-  bytes proposalHash = 2;
-
-  // certificate is the RCC that can accompany
-  // a proposal message
-  RoundChangeCertificate certificate = 3;
+message Sendblock {
+  bytes block = 1;
+  bytes blockHash = 2;
+  uint64 blockNumber = 2;
 }
 
-// PrepareMessage is the message for the PREPARE phase
-message PrepareMessage {
-  // proposalHash is the Keccak hash of the proposal
-  bytes proposalHash = 1;
+message Version {
+    string versionName = 1;
+    int32 currentTime  = 2;
+    bytes addrYou      = 3;
+    bytes addrMe       = 4;
+    uint64 bestHeight  = 5;
 }
 
-// CommitMessage is the message for the COMMIT phase
-message CommitMessage {
-  // proposalHash is the Keccak hash of the proposal
-  bytes proposalHash = 1;
+message Addr {
+    bytes addr = 1;
+}
 
-  // committedSeal is the seal of the sender
-  bytes committedSeal = 2;
+message GetAddr {
+}
+
+message Block {
+    BlockHeader header = 1;
+
+}
+message BlockHeader {
+}
+
+message Transaction {
+    bytes 
+}
+message TransactionList {
+    repeated Transaction transactions = 1;
+}
+message GetBlocks {
+
 }

@@ -5,6 +5,7 @@ import (
 
 	"github.com/Gabulhas/polygon-external-consensus/consensus/external/proto"
 	"github.com/Gabulhas/polygon-external-consensus/network"
+	"github.com/Gabulhas/polygon-external-consensus/types"
 	"github.com/libp2p/go-libp2p/core/peer"
 )
 
@@ -27,9 +28,9 @@ func (d *External) Multicast(msg *proto.Message) {
 }
 
 // setupTransport sets up the gossip transport protocol
-func (i *External) setupTransport() error {
+func (d *External) setupTransport() error {
 	// Define a new topic
-	topic, err := i.network.NewTopic(externalProto, &proto.Message{})
+	topic, err := d.network.NewTopic(externalProto, &proto.Message{})
 	if err != nil {
 		return err
 	}
@@ -41,26 +42,24 @@ func (i *External) setupTransport() error {
 			msg, ok := obj.(*proto.Message)
 			fmt.Printf("msg: %v\n", msg)
 			if !ok {
-				i.logger.Error("invalid type assertion for message request")
+				d.logger.Error("invalid type assertion for message request")
 
 				return
 			}
 
-			//			i.consensus.AddMessage(msg)
-			//
-			//			i.logger.Debug(
-			//				"validator message received",
-			//				"type", msg.Type.String(),
-			//				"height", msg.GetView().Height,
-			//				"round", msg.GetView().Round,
-			//				"addr", types.BytesToAddress(msg.From).String(),
-			//			)
+			d.logger.Debug(
+				"validator message received",
+				"type", msg.Type.String(),
+				"height", msg.GetView().Height,
+				"round", msg.GetView().Round,
+				"addr", types.BytesToAddress(msg.From).String(),
+			)
 		},
 	); err != nil {
 		return err
 	}
 
-	i.transport = &gossipTransport{topic: topic}
+	d.transport = &gossipTransport{topic: topic}
 
 	return nil
 }

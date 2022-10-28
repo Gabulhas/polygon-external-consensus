@@ -58,6 +58,7 @@ func Factory(
 		executor:       params.Executor,
 		metrics:        params.Metrics,
 		secretsManager: params.SecretsManager,
+		network:        params.Network,
 		txpool:         params.TxPool,
 		syncer: syncer.NewSyncer(
 			params.Logger,
